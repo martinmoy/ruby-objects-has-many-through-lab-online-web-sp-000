@@ -12,8 +12,13 @@ class Doctor
   end
 
   def appointments
-    Appointment.select |name|
-    name.doctor == self
+    Appointment.select {|name|
+    name.doctor == self}
+  end
+
+  def patients
+    Appointment.map {|name|
+    name.patient}
   end
 
 
