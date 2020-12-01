@@ -11,8 +11,9 @@ class Doctor
     @@all
   end
 
-  def appointments(date,patient)
-    Appointment.self(date,patient,self)
+  def appointments 
+    Appointment.select |name|
+    name.doctor == self
   end
 
 
