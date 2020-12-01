@@ -11,5 +11,9 @@ class Doctor
     @@all
   end
 
+  def appointments(date,patient)
+    Appointment.self(date,patient,self)
+  end
+
 
 end
